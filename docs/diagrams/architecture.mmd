@@ -1,0 +1,11 @@
+flowchart TD
+    U[Student] --> M[main.py - CLI]
+    M --> V[validators.py]
+    M --> T[task_manager.py]
+    M --> P[planner.py]
+    M --> A[analytics.py]
+    M --> D[demo_data.py]
+    X[tests/test_flow.py] -.tests.-> T
+    X -.tests.-> P
+    X -.tests.-> A
+    X -.tests.-> V

@@ -1,0 +1,12 @@
+flowchart LR
+    S([Start]) --> M[Display menu] --> C{Choice}
+    C -->|1,2,3,7| T[Task Management]
+    C -->|4| P[Study Planner]
+    C -->|5| A[Progress Analysis]
+    C -->|6| D[Load Demo Data]
+    T --> R[Display result]
+    P --> R
+    A --> R
+    D --> R
+    R --> M
+    C -->|0| E([Exit])

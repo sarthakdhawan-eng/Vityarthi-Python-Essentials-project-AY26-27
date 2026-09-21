@@ -1,0 +1,15 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, style="rounded", fontname="Helvetica"];
+  Student [label="Student"];
+  Main [label="main.py"];
+  Planner [label="planner.py"];
+  TaskData [label="Task list"];
+  Student -> Main [label="Select 'Generate plan'"];
+  Main -> TaskData [label="Read tasks"];
+  TaskData -> Main [label="Return tasks"];
+  Main -> Planner [label="Rank pending tasks"];
+  Planner -> Planner [label="Score + selection sort"];
+  Planner -> Main [label="Ranked tasks"];
+  Main -> Student [label="Display study plan"];
+}

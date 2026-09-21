@@ -1,0 +1,10 @@
+flowchart LR
+    Main[main.py] --> V[validators.py]
+    Main --> T[task_manager.py]
+    Main --> P[planner.py]
+    Main --> A[analytics.py]
+    Main --> D[demo_data.py]
+    Test[tests/test_flow.py] -.-> V
+    Test -.-> T
+    Test -.-> P
+    Test -.-> A

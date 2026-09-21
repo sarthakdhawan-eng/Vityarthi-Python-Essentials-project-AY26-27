@@ -1,0 +1,23 @@
+digraph G {
+  rankdir=LR;
+  node [fontname="Helvetica"];
+  Student [shape=box, style="rounded", label="Student"];
+  subgraph cluster_system {
+    label="Flow";
+    style="rounded";
+    Add [shape=ellipse, label="Add task"];
+    View [shape=ellipse, label="View tasks"];
+    Complete [shape=ellipse, label="Complete task"];
+    Delete [shape=ellipse, label="Delete task"];
+    Plan [shape=ellipse, label="Generate study plan"];
+    Progress [shape=ellipse, label="View progress"];
+    Demo [shape=ellipse, label="Load demo data"];
+  }
+  Student -> Add;
+  Student -> View;
+  Student -> Complete;
+  Student -> Delete;
+  Student -> Plan;
+  Student -> Progress;
+  Student -> Demo;
+}

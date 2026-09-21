@@ -1,0 +1,12 @@
+sequenceDiagram
+    actor Student
+    participant Main as main.py
+    participant Data as Task list
+    participant Planner as planner.py
+    Student->>Main: Select Generate plan
+    Main->>Data: Read tasks
+    Data-->>Main: Return tasks
+    Main->>Planner: Rank pending tasks
+    Planner->>Planner: Score + selection sort
+    Planner-->>Main: Ranked tasks
+    Main-->>Student: Display study plan

@@ -1,0 +1,23 @@
+digraph G {
+  rankdir=TB;
+  graph [pad="0.2", nodesep="0.35", ranksep="0.45"];
+  node [shape=box, style="rounded", fontname="Helvetica"];
+  User [label="Student"];
+  Main [label="main.py\nCLI / Menu"];
+  Validator [label="validators.py\nInput validation"];
+  Task [label="task_manager.py\nTask operations"];
+  Planner [label="planner.py\nPriority + Selection Sort"];
+  Analytics [label="analytics.py\nProgress calculations"];
+  Demo [label="demo_data.py\nSample tasks"];
+  Tests [label="tests/test_flow.py\nUnit tests", shape=note];
+  User -> Main;
+  Main -> Validator;
+  Main -> Task;
+  Main -> Planner;
+  Main -> Analytics;
+  Main -> Demo;
+  Tests -> Task [style=dashed];
+  Tests -> Planner [style=dashed];
+  Tests -> Analytics [style=dashed];
+  Tests -> Validator [style=dashed];
+}

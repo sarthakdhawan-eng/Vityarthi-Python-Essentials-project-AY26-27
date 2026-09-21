@@ -1,0 +1,20 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, style="rounded", fontname="Helvetica"];
+  Main [label="main.py"];
+  V [label="validators.py"];
+  T [label="task_manager.py"];
+  P [label="planner.py"];
+  A [label="analytics.py"];
+  D [label="demo_data.py"];
+  Test [label="test_flow.py", shape=note];
+  Main -> V [label="input"];
+  Main -> T [label="tasks"];
+  Main -> P [label="planning"];
+  Main -> A [label="analysis"];
+  Main -> D [label="demo"];
+  Test -> V [style=dashed];
+  Test -> T [style=dashed];
+  Test -> P [style=dashed];
+  Test -> A [style=dashed];
+}

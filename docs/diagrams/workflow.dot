@@ -1,0 +1,24 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, style="rounded", fontname="Helvetica"];
+  Start [shape=oval, label="Start"];
+  Menu [label="Display menu"];
+  Choice [shape=diamond, label="User choice"];
+  Task [label="Task Management"];
+  Plan [label="Study Planner"];
+  Progress [label="Progress Analysis"];
+  Demo [label="Load demo data"];
+  Result [label="Display result"];
+  Exit [shape=oval, label="Exit"];
+  Start -> Menu -> Choice;
+  Choice -> Task [label="1,2,3,7"];
+  Choice -> Plan [label="4"];
+  Choice -> Progress [label="5"];
+  Choice -> Demo [label="6"];
+  Task -> Result;
+  Plan -> Result;
+  Progress -> Result;
+  Demo -> Result;
+  Result -> Menu;
+  Choice -> Exit [label="0"];
+}
